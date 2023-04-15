@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+<variable
+    name="favoriteEntity"
+    type="com.example.coolbookshelf.data.database.entities.FavoritesEntity" />
+    </data>
+
+    <androidx.constraintlayout.motion.widget.MotionLayout
+        android:id="@+id/favorites_book_row_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layoutDescription="@xml/favorites_row_layout_xml_favorites_book_row_layout_scene2">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/favorite_card_book"
+            android:layout_width="0dp"
+            android:layout_height="220dp"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="@color/transparentDark"
+            android:outlineSpotShadowColor="@color/white"
+            app:cardCornerRadius="20dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:strokeColor="@color/transparent"
+            app:strokeWidth="25dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/booksRowLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/favorite_card_food_image"
+                    loadImageBook="@{favoriteEntity.item.selfLink}"
+                    android:layout_width="120dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="20dp"
+                    android:scaleType="centerCrop"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:srcCompat="@tools:sample/avatars" />
+
+                <TextView
+                    android:id="@+id/favorite_card_food_name"
+                    android:layout_width="200dp"
+                    android:layout_height="25dp"
+                    android:layout_marginTop="20dp"
+                    android:lines="1"
+                    android:text="@{favoriteEntity.item.volumeInfo.title}"
+                    android:textSize="20dp"
+                    app:layout_constraintLeft_toRightOf="@id/favorite_card_food_image"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/favorite_card_food_description"
+                    android:layout_width="220dp"
+                    android:layout_height="80dp"
+                    android:layout_marginTop="20dp"
+                    android:ellipsize="end"
+                    android:lines="4"
+                    android:scrollHorizontally="true"
+                    android:text="@{favoriteEntity.item.description}"
+                    android:textSize="16dp"
+                    app:layout_constraintLeft_toRightOf="@id/favorite_card_food_image"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/favorite_card_food_name" />
+
+                <ImageView
+                    android:id="@+id/favorite_heart_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/favorite_card_food_description"
+                    app:srcCompat="@drawable/ic_heart_24"
+                    app:tint="#FF0202" />
+
+                <TextView
+                    android:id="@+id/favorite_amount_likes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="100"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/favorite_heart_icon" />
+
+                <ImageView
+                    android:id="@+id/favorite_time_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp"
+                    app:layout_constraintLeft_toRightOf="@id/favorite_heart_icon"
+                    app:layout_constraintRight_toLeftOf="@id/favorite_egg_icon"
+                    app:layout_constraintTop_toBottomOf="@id/favorite_card_food_description"
+                    app:srcCompat="@drawable/ic_star_24"
+                    app:tint="#FFEB3B" />
+
+                <TextView
+                    android:id="@+id/amount_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="25dp"
+                    android:text="@{favoriteEntity.item.likes}"
+                    app:layout_constraintLeft_toRightOf="@id/favorite_amount_likes"
+                    app:layout_constraintTop_toBottomOf="@id/favorite_time_icon" />
+
+                <ImageView
+                    android:id="@+id/favorite_egg_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp"
+                    app:layout_constraintLeft_toRightOf="@id/favorite_time_icon"
+                    app:layout_constraintTop_toBottomOf="@id/favorite_card_food_description"
+                    app:srcCompat="@drawable/ic_library_books_24"
+                    app:tint="@color/yellow" />
+
+                <TextView
+                    android:id="@+id/amount_books"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="25dp"
+                    android:text="@{favoriteEntity.item.likes}"
+                    app:layout_constraintLeft_toRightOf="@id/amount_time"
+                    app:layout_constraintTop_toBottomOf="@id/favorite_egg_icon" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+    </androidx.constraintlayout.motion.widget.MotionLayout>
+</layout>

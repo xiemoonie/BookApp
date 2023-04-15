@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/fragment_books"
+        android:icon="@drawable/ic_book_24"
+        android:title="@string/books_fragmwnt_tittle" />
+    <item
+        android:id="@+id/fragment_favorite"
+        android:icon="@drawable/ic_star_24"
+        android:title="@string/favorite_fragment_tittle" />
+</menu>

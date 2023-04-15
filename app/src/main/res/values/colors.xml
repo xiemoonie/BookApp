@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#45A4EF</color>
+
+    <color name="gray">#C3C1C1</color>
+    <color name="lightGray">#818181</color>
+    <color name="black">#FFFFFF</color>
+    <color name="skyblue">#78CBF1</color>
+    <color name="blue">#FF9100</color>
+    <color name="white">#050505</color>
+    <color name="green">#055101</color>
+    <color name="yellow">#FFD500</color>
+    <color name="pink">#F683F0</color>
+    <color name="transparent">#9933418D</color>
+    <color name="transparentDark">#F25FB4EC</color>
+
+    <color name= "checkedChipBackgroundColor">@color/transparent</color>
+    <color name= "chipBackgroundColor">@color/lightGray</color>
+    <color name= "checkedChipTextColor">@color/green</color>
+    <color name= "chipTextColor">@color/transparentDark</color>
+
+    <color name="actionBarBackgroundColor">@color/gray</color>
+    <color name="strokeColor">@color/gray</color>
+
+    <color name="statusBar">@color/colorPrimary</color>
+    <color name="contextualStatusBarColor">@color/skyblue</color>
+    <color name="contextualActionBarColor">@color/colorPrimary</color>
+</resources>

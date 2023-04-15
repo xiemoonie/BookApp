@@ -1,0 +1,367 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.motion.widget.MotionLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    app:layoutDescription="@xml/fragment_overview_scene"
+    tools:context=".ui.fragments.overview.OverviewFragment">
+
+    <ImageView
+        android:id="@+id/main_imageView"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@tools:sample/avatars" />
+
+    <View
+        android:id="@+id/grandient_overlay"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:background="@drawable/gradient_overlay"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <ImageView
+        android:id="@+id/time_imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="180dp"
+        android:layout_marginRight="100dp"
+        android:src="@drawable/ic_star_24"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="@color/yellow"></ImageView>
+
+    <TextView
+        android:id="@+id/time_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="100dp"
+        android:text="100"
+        android:textColor="@color/white"
+        android:textSize="15dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/time_imageView"></TextView>
+
+    <ImageView
+        android:id="@+id/likes_imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="180dp"
+        android:src="@drawable/ic_heart_24"
+        app:layout_constraintLeft_toRightOf="@id/time_imageView"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="@color/pink"></ImageView>
+
+    <TextView
+        android:id="@+id/like_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:text="100"
+        android:textColor="@color/white"
+        android:textSize="15dp"
+        app:layout_constraintLeft_toRightOf="@id/time_textView"
+        app:layout_constraintTop_toBottomOf="@id/likes_imageView"></TextView>
+
+    <TextView
+        android:id="@+id/title_textView"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="20dp"
+        android:text="Title"
+        android:textColor="@color/white"
+        android:textSize="30dp"
+        app:layout_constraintTop_toBottomOf="@id/main_imageView"></TextView>
+
+    <ImageView
+        android:id="@+id/horror_imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:src="@drawable/ice_check_24"
+        app:layout_constraintStart_toStartOf="@+id/title_textView"
+        app:layout_constraintTop_toBottomOf="@+id/title_textView"
+        app:tint="@color/gray" />
+
+    <TextView
+        android:id="@+id/horror_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="@string/horror"
+        android:textColor="@color/gray"
+        app:layout_constraintBottom_toBottomOf="@+id/horror_imageView"
+        app:layout_constraintStart_toEndOf="@+id/horror_imageView"
+        app:layout_constraintTop_toTopOf="@+id/horror_imageView" />
+
+    <ImageView
+        android:id="@+id/romance_imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:src="@drawable/ice_check_24"
+        app:layout_constraintStart_toStartOf="@+id/horror_imageView"
+        app:layout_constraintTop_toBottomOf="@+id/horror_imageView"
+        app:tint="@color/gray" />
+
+    <TextView
+        android:id="@+id/romance_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="@string/romance"
+        android:textColor="@color/gray"
+        app:layout_constraintBottom_toBottomOf="@+id/romance_imageView"
+        app:layout_constraintStart_toEndOf="@+id/romance_imageView"
+        app:layout_constraintTop_toTopOf="@+id/romance_imageView" />
+
+    <ImageView
+        android:id="@+id/scifi_imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:src="@drawable/ice_check_24"
+        app:layout_constraintBottom_toBottomOf="@+id/horror_textView"
+        app:layout_constraintStart_toEndOf="@+id/horror_textView"
+        app:layout_constraintTop_toTopOf="@+id/horror_textView"
+        app:tint="@color/gray" />
+
+    <TextView
+        android:id="@+id/scifi_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="@string/sci_fi"
+        android:textColor="@color/gray"
+        app:layout_constraintBottom_toBottomOf="@+id/scifi_imageView"
+        app:layout_constraintStart_toEndOf="@+id/scifi_imageView"
+        app:layout_constraintTop_toTopOf="@+id/scifi_imageView" />
+
+    <ImageView
+        android:id="@+id/fantasy_imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:src="@drawable/ice_check_24"
+        app:layout_constraintStart_toStartOf="@+id/scifi_imageView"
+        app:layout_constraintTop_toBottomOf="@+id/scifi_imageView"
+        app:tint="@color/gray" />
+
+    <TextView
+        android:id="@+id/fantasy_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="@string/fantasy"
+        android:textColor="@color/gray"
+        app:layout_constraintBottom_toBottomOf="@+id/fantasy_imageView"
+        app:layout_constraintStart_toEndOf="@+id/fantasy_imageView"
+        app:layout_constraintTop_toTopOf="@+id/fantasy_imageView" />
+
+    <ImageView
+        android:id="@+id/dystopian_imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:src="@drawable/ice_check_24"
+        app:layout_constraintBottom_toBottomOf="@+id/scifi_textView"
+        app:layout_constraintStart_toEndOf="@+id/scifi_textView"
+        app:layout_constraintTop_toTopOf="@+id/scifi_textView"
+        app:tint="@color/gray" />
+
+    <TextView
+        android:id="@+id/dystopian_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="@string/dystopian"
+        android:textColor="@color/gray"
+        app:layout_constraintBottom_toBottomOf="@+id/dystopian_imageView"
+        app:layout_constraintStart_toEndOf="@+id/dystopian_imageView"
+        app:layout_constraintTop_toTopOf="@+id/dystopian_imageView" />
+
+    <ImageView
+        android:id="@+id/historical_imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:src="@drawable/ice_check_24"
+        app:layout_constraintStart_toStartOf="@+id/dystopian_imageView"
+        app:layout_constraintTop_toBottomOf="@+id/dystopian_imageView"
+        app:tint="@color/gray" />
+
+    <TextView
+        android:id="@+id/historical_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="@string/historical"
+        android:textColor="@color/gray"
+        app:layout_constraintBottom_toBottomOf="@+id/historical_imageView"
+        app:layout_constraintStart_toEndOf="@+id/historical_imageView"
+        app:layout_constraintTop_toTopOf="@+id/historical_imageView" />
+
+    <ImageView
+        android:id="@+id/biography_imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:src="@drawable/ice_check_24"
+        app:layout_constraintStart_toStartOf="@+id/romance_imageView"
+        app:layout_constraintTop_toBottomOf="@+id/romance_imageView"
+        app:tint="@color/gray" />
+
+    <TextView
+        android:id="@+id/biography_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="@string/biography"
+        android:textColor="@color/gray"
+        app:layout_constraintBottom_toBottomOf="@+id/biography_imageView"
+        app:layout_constraintStart_toEndOf="@+id/biography_imageView"
+        app:layout_constraintTop_toTopOf="@+id/biography_imageView" />
+
+    <ImageView
+        android:id="@+id/art_imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:src="@drawable/ice_check_24"
+        app:layout_constraintStart_toStartOf="@+id/fantasy_imageView"
+        app:layout_constraintTop_toBottomOf="@+id/fantasy_imageView"
+        app:tint="@color/gray" />
+
+    <TextView
+        android:id="@+id/art_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="@string/art"
+        android:textColor="@color/gray"
+        app:layout_constraintBottom_toBottomOf="@+id/art_imageView"
+        app:layout_constraintStart_toEndOf="@+id/art_imageView"
+        app:layout_constraintTop_toTopOf="@+id/art_imageView" />
+
+    <ImageView
+        android:id="@+id/travel_imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:src="@drawable/ice_check_24"
+        app:layout_constraintStart_toStartOf="@+id/historical_imageView"
+        app:layout_constraintTop_toBottomOf="@+id/historical_imageView"
+        app:tint="@color/gray" />
+
+    <TextView
+        android:id="@+id/travel_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="@string/travel"
+        android:textColor="@color/gray"
+        app:layout_constraintBottom_toBottomOf="@+id/travel_imageView"
+        app:layout_constraintStart_toEndOf="@+id/travel_imageView"
+        app:layout_constraintTop_toTopOf="@+id/travel_imageView" />
+
+    <ImageView
+        android:id="@+id/spirituality_imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:src="@drawable/ice_check_24"
+        app:layout_constraintStart_toStartOf="@+id/biography_imageView"
+        app:layout_constraintTop_toBottomOf="@+id/biography_imageView"
+        app:tint="@color/gray" />
+
+    <TextView
+        android:id="@+id/spirituality_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="@string/spirituality"
+        android:textColor="@color/gray"
+        app:layout_constraintBottom_toBottomOf="@+id/spirituality_imageView"
+        app:layout_constraintStart_toEndOf="@+id/spirituality_imageView"
+        app:layout_constraintTop_toTopOf="@+id/spirituality_imageView" />
+
+    <ImageView
+        android:id="@+id/selfhelp_imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:src="@drawable/ice_check_24"
+        app:layout_constraintStart_toStartOf="@+id/art_imageView"
+        app:layout_constraintTop_toBottomOf="@+id/art_imageView"
+        app:tint="@color/gray" />
+
+    <TextView
+        android:id="@+id/selfhelp_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="@string/selfhelp"
+        android:textColor="@color/gray"
+        app:layout_constraintBottom_toBottomOf="@+id/selfhelp_imageView"
+        app:layout_constraintStart_toEndOf="@+id/selfhelp_imageView"
+        app:layout_constraintTop_toTopOf="@+id/selfhelp_imageView" />
+
+    <ImageView
+        android:id="@+id/science_imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:src="@drawable/ice_check_24"
+        app:layout_constraintStart_toStartOf="@+id/travel_imageView"
+        app:layout_constraintTop_toBottomOf="@+id/travel_imageView"
+        app:tint="@color/gray" />
+
+    <TextView
+        android:id="@+id/science_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="@string/science"
+        android:textColor="@color/gray"
+        app:layout_constraintBottom_toBottomOf="@+id/science_imageView"
+        app:layout_constraintStart_toEndOf="@+id/science_imageView"
+        app:layout_constraintTop_toTopOf="@+id/science_imageView" />
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="12dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/science_imageView">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/summary_textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:text="TextView"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.motion.widget.MotionLayout>

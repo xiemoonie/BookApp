@@ -1,0 +1,45 @@
+<resources>
+    <string name="app_name">CoolBookShelf</string>
+    <string name="action_settings">Settings</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="favorite_fragment_tittle">favorite</string>
+    <string name="books_fragmwnt_tittle">books</string>
+
+
+    <string name="all">all</string>
+    <string name="book">books</string>
+    <string name="magazine">magazines</string>
+    <string name="noConnection">No Connection</string>
+    <string name="search">search</string>
+
+    <string name="full">full</string>
+    <string name="lite">lite</string>
+    <string name="horror">horror</string>
+    <string name="romance">romance</string>
+    <string name="sci_fi">sci-fi</string>
+    <string name="fantasy">fantasy</string>
+    <string name="dystopian">dystopian</string>
+    <string name="historical">historical</string>
+    <string name="biography">biography</string>
+    <string name="art">art</string>
+    <string name="travel">travel</string>
+    <string name="science">science</string>
+    <string name="selfhelp">self-help</string>
+    <string name="spirituality">spirituality</string>
+    <string name="general">general</string>
+    <string name="other">other</string>
+    <string name="save_to_favorites">saveToFavorites</string>
+    <string name="delete_favorite_item">delete item</string>
+    <string name="delete_all">delete all</string>
+
+
+</resources>

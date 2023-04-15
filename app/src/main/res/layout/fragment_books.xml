@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="mainViewModel"
+            type="com.example.coolbookshelf.viewmodel.MainViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bookapp"
+        tools:context=".ui.fragments.BookFragment">
+
+
+        <com.todkars.shimmer.ShimmerRecyclerView
+            android:id="@+id/recycler_view"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:orientation="vertical"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0"
+            app:shimmer_recycler_item_count="3"
+            app:shimmer_recycler_layout="@layout/book_row_layout" />
+
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/book_fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="24dp"
+            android:layout_marginBottom="24dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:src="@drawable/ic_replace_24"
+            android:tint="@color/white"
+            app:backgroundTint="@color/lightGray"
+            app:layout_constraintBottom_toBottomOf="@+id/recycler_view"
+            app:layout_constraintEnd_toEndOf="@+id/recycler_view" />
+
+
+        <ImageView
+            android:id="@+id/sadFace"
+            readApiResponse="@{mainViewModel.bookResponse}"
+            readDatabase="@{mainViewModel.readBook}"
+            android:layout_width="149dp"
+            android:layout_height="151dp"
+            android:layout_marginTop="200dp"
+            android:alpha="0.4"
+            android:src="@drawable/ic_baseline_sentiment_very_dissatisfied_24"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toTopOf="@id/textView"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView"
+            readApiResponse2="@{mainViewModel.bookResponse}"
+            readDatabase2="@{mainViewModel.readBook}"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:alpha="0.7"
+            android:text="@string/noConnection"
+            android:textAlignment="center"
+            android:textSize="35dp"
+            android:visibility="invisible"
+            app:layout_constraintLeft_toRightOf="parent"
+            app:layout_constraintRight_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/sadFace" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

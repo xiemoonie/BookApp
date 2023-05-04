@@ -5,18 +5,18 @@
     <color name="gray">#C3C1C1</color>
     <color name="lightGray">#818181</color>
     <color name="black">#000000</color>
-    <color name="skyblue">#91FFFC</color>
-    <color name="blue">#FF9100</color>
-    <color name="white">#FFFFFFFF</color>
+    <color name="orange">#FF9100</color>
+    <color name="white">#FFFFFF</color>
     <color name="green">#10BD09</color>
     <color name="yellow">#FFD500</color>
     <color name="pink">#F683F0</color>
     <color name="transparent">#9933418D</color>
     <color name="transparentDark">#0B6A9A</color>
-
+    <color name="blueNice">#1B719C</color>
+    <color name="nocolor">#005FB4EC</color>
     <color name= "checkedChipBackgroundColor">@color/transparent</color>
     <color name= "chipBackgroundColor">@color/lightGray</color>
-    <color name= "checkedChipTextColor">#4196FF</color>
+    <color name= "checkedChipTextColor">@color/blueNice</color>
     <color name= "chipTextColor">@color/transparentDark</color>
 
 

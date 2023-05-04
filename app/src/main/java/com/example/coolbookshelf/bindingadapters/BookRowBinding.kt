@@ -51,11 +51,11 @@ class BookRowBinding {
                 when (view) {
                     is TextView -> {
                         view.setTextColor(
-                            ContextCompat.getColor(view.context, R.color.blue)
+                            ContextCompat.getColor(view.context, R.color.orange)
                         )
                     }
                     is ImageView -> {
-                        view.setColorFilter(ContextCompat.getColor(view.context, R.color.blue))
+                        view.setColorFilter(ContextCompat.getColor(view.context, R.color.orange))
                     }
                 }
             }

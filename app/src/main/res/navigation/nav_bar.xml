@@ -8,7 +8,7 @@
     <fragment
         android:id="@+id/fragment_books"
         android:name="com.example.coolbookshelf.ui.fragments.BookFragment"
-        android:label="fragment_books_fragment"
+        android:label="Books"
         tools:layout="@layout/fragment_books">
         <action
             android:id="@+id/action_fragment_books_to_bookBottomSheet"
@@ -32,7 +32,7 @@
     <fragment
         android:id="@+id/fragment_favorite"
         android:name="com.example.coolbookshelf.ui.fragments.FavoriteBookFragment"
-        android:label="fragment_favorite_books"
+        android:label="Favorite Books"
         tools:layout="@layout/fragment_favorite_books" >
         <action
             android:id="@+id/action_fragment_favorite_to_detailsActivity"

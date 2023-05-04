@@ -12,7 +12,7 @@
        </KeyFrameSet>
     </Transition>
 
-    <ConstraintSet android:id="@+id/start">]t
+    <ConstraintSet android:id="@+id/start">
         <Constraint
             android:id="@+id/favorite_card_book"
             android:layout_width="0dp"

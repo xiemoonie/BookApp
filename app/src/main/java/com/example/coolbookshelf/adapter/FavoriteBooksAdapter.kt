@@ -8,7 +8,6 @@ import androidx.fragment.app.FragmentActivity
 import androidx.navigation.findNavController
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
-import androidx.recyclerview.widget.RecyclerView.ViewHolder
 import com.example.coolbookshelf.R
 import com.example.coolbookshelf.data.database.entities.FavoritesEntity
 import com.example.coolbookshelf.databinding.FavoritesRowLayoutBinding
@@ -90,7 +89,7 @@ private var favoriteBooks = emptyList<FavoritesEntity>()
                 false
             }
         }
-        Log.d("before if","ta-da" +selectedBooks.size)
+
         if(selectedBooks.contains(selectedBook) && starAnim == true){
             Log.d("currentState","" +holder.binding.favoritesBookRowLayout.currentState)
 
@@ -104,11 +103,11 @@ private var favoriteBooks = emptyList<FavoritesEntity>()
 
         if(selectedBooks.contains(currentBook)){
             selectedBooks.remove(currentBook)
-            changeBookStyle(holder, R.color.blue, R.color.gray)
+            changeBookStyle(holder,R.color.transparent, R.color.transparent)
             applyActionModeTitle()
         }else{
             selectedBooks.add(currentBook)
-            changeBookStyle(holder, R.color.transparent, R.color.colorPrimary)
+            changeBookStyle(holder, R.color.transparent, R.color.transparent)
             applyActionModeTitle()
         }
     }
@@ -149,6 +148,7 @@ private var favoriteBooks = emptyList<FavoritesEntity>()
         actionMode?.menuInflater?.inflate(R.menu.favorite_contextual_menu, menu)
         mActionMode = actionMode!!
         applyStatusBarColor(R.color.contextualStatusBarColor)
+       // applyStatusBarColor(R.color.transparent)
         return true
     }
 
@@ -167,28 +167,26 @@ private var favoriteBooks = emptyList<FavoritesEntity>()
                   mainViewModel.deleteFavoriteBook(it)
               }
               selectedBooks.clear()
+              multiSelection = false
+              // selectedBooks.clear()
+              actionMode?.finish()
           }, 2000)
           if(selectedBooks.size == 1){
               showSnackBar("${selectedBooks.size}Book removed.")
           }else{
               showSnackBar("${selectedBooks.size}Books removed.")
           }
-
-
-          multiSelection = false
-         // selectedBooks.clear()
-          actionMode?.finish()
         }
         return true
     }
 
     override fun onDestroyActionMode(mode: ActionMode?) {
         myViewHolders.forEach{ holder->
-        changeBookStyle(holder, R.color.white, R.color.gray)
+            changeBookStyle(holder, R.color.nocolor, R.color.transparent)
+            applyStatusBarColor(R.color.statusBar)
+            multiSelection = false
+            selectedBooks.clear()
           }
-        applyStatusBarColor(R.color.statusBar)
-        multiSelection = false
-        //selectedBooks.clear()
     }
 
     private fun applyStatusBarColor(color: Int){
